@@ -1,11 +1,14 @@
 <template lang="html">
   <div>
-<h1>Magic: The Gathering Cards</h1>
+    <h1>Magic: The Gathering Cards</h1>
+    <card-list :cards="cards"></card-list>
   </div>
 </template>
 
 <script>
 import {eventBus} from './main.js';
+
+import CardList from './components/CardList.vue';
 
 export default {
   name: 'app',
@@ -18,6 +21,9 @@ export default {
     fetch('https://api.magicthegathering.io/v1/cards')
     .then(result => result.json())
     .then(cards => this.cards = cards)
+  },
+  components: {
+    'card-list': CardList
   }
 }
 </script>
