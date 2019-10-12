@@ -1,7 +1,9 @@
 <template lang="html">
   <div v-if="card">
     <h3>{{card.name}}</h3>
-
+    <img :src='card.imageUrl'/>
+    <p>{{card.rarity}}</p>
+    <p>Artist: {{card.artist}}</p>
   </div>
 </template>
 
