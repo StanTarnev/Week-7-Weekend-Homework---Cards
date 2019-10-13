@@ -43,7 +43,8 @@ export default {
       this.selectedCard = card;
     })
     eventBus.$on('card-removed', () => {
-      this.cards.cards.shift();
+      let result = this.cards.cards.indexOf(this.selectedCard)
+      this.cards.cards.splice(result, 1);
     })
     // eventBus.$on('card-rared', (card) => {
     //   this.rareCards.push(card);
