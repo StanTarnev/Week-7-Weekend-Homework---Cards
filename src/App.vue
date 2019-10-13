@@ -3,6 +3,8 @@
     <h1>Magic: The Gathering Cards</h1>
     <card-dropdown :cards="cards"></card-dropdown>
     <card-detail :card="selectedCard"></card-detail>
+    <button v-on:click="showRareCards">Show Rare Cards</button>
+    <rare-cards-list :cards="rareCards"></rare-cards-list>
   </div>
 </template>
 
@@ -11,13 +13,25 @@ import {eventBus} from './main.js';
 
 import CardDropdown from './components/CardDropdown.vue';
 import CardDetail from  './components/CardDetail.vue';
+import RareCardsList from './components/RareCardsList';
 
 export default {
   name: 'app',
   data(){
     return{
       cards: [],
-      selectedCard: null
+      selectedCard: null,
+      rareCards: []
+    }
+  },
+  methods: {
+    showRareCards() {
+      // eventBus.$emit('card-rared', this.cards)
+      for (var card in this.cards.cards) {
+        if (card.rarity === "Rare") {
+          this.rareCards.push(card);
+        }
+      }
     }
   },
   mounted(){
@@ -28,10 +42,17 @@ export default {
     eventBus.$on('card-selected', (card) => {
       this.selectedCard = card;
     })
+    eventBus.$on('card-removed', () => {
+      this.cards.cards.shift();
+    })
+    // eventBus.$on('card-rared', (card) => {
+    //   this.rareCards.push(card);
+    // })
   },
   components: {
     'card-dropdown': CardDropdown,
-    'card-detail': CardDetail
+    'card-detail': CardDetail,
+    'rare-cards-list': RareCardsList
   }
 }
 </script>

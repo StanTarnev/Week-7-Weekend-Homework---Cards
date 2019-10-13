@@ -1,5 +1,5 @@
 <template lang="html">
-  <li>{{card.name}}</li>
+  <li v-on:click="handleChoice">{{card.name}}</li>
 </template>
 
 <script>

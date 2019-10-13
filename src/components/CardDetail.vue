@@ -4,6 +4,7 @@
     <img :src='card.imageUrl'/>
     <p>{{card.rarity}}</p>
     <p>Artist: {{card.artist}}</p>
+    <button v-on:click="removeFromList">Remove Card</button>
   </div>
 </template>
 
@@ -12,7 +13,12 @@ import {eventBus} from '../main.js';
 
 export default {
   name: 'card-detail',
-  props:['card']
+  props:['card'],
+  methods: {
+    removeFromList() {
+      eventBus.$emit('card-removed', this.card)
+    }
+  }
 }
 </script>
 
