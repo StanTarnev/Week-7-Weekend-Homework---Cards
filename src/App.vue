@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
     <h1>Magic: The Gathering Cards</h1>
-    <card-list :cards="cards"></card-list>
+    <card-dropdown :cards="cards"></card-dropdown>
     <card-detail :card="selectedCard"></card-detail>
   </div>
 </template>
@@ -9,7 +9,7 @@
 <script>
 import {eventBus} from './main.js';
 
-import CardList from './components/CardList.vue';
+import CardDropdown from './components/CardDropdown.vue';
 import CardDetail from  './components/CardDetail.vue';
 
 export default {
@@ -30,7 +30,7 @@ export default {
     })
   },
   components: {
-    'card-list': CardList,
+    'card-dropdown': CardDropdown,
     'card-detail': CardDetail
   }
 }
