@@ -1,5 +1,5 @@
 <template lang="html">
-  <li v-on:click="handleClick">{{card.name}}</li>
+  <li>{{card.name}}</li>
 </template>
 
 <script>
@@ -14,7 +14,7 @@ export default {
   },
   props: ['card'],
   methods: {
-    handleClick(){
+    handleChoice(){
       eventBus.$emit('card-selected', this.card)
     }
   }
