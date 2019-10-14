@@ -1,9 +1,9 @@
 <template lang="html">
-  <div>
+  <div class="body">
     <h1>Magic: The Gathering Cards</h1>
-    <card-dropdown :cards="cards"></card-dropdown>
-    <card-detail :card="selectedCard"></card-detail>
-    <button v-on:click="showRareCards">Show Rare Cards</button>
+    <card-dropdown :cards="cards" class="dropdown"></card-dropdown>
+    <card-detail :card="selectedCard" class="card-detail"></card-detail>
+    <button v-on:click="showRareCards" class="show-rare-cards">Show Rare Cards</button>
     <rare-cards-list :cards="rareCards"></rare-cards-list>
   </div>
 </template>
@@ -59,4 +59,20 @@ export default {
 </script>
 
 <style lang="css" scoped>
+  /* .body {
+    background-image: url("https://a-static.besthdwallpaper.com/magic-the-gathering-wallpaper-2560x1440-1539_51.jpg");
+    background-size: 100%;
+    font-family: fantasy;
+  }
+  .card-detail {
+    border: solid 2px red;
+    border-radius: 10px;
+    background-color: papayawhip;
+    padding: 20px;
+    margin: 10px;
+
+  }
+  .dropdown .show-rare-cards {
+    margin: 20px;
+  } */
 </style>
