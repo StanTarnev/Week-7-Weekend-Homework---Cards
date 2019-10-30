@@ -1,10 +1,11 @@
 <template lang="html">
   <div class="body">
     <h1>Magic: The Gathering Cards</h1>
+    <p v-if="!cards">Loading...</p>
     <card-dropdown :cards="cards" class="dropdown"></card-dropdown>
     <card-detail :card="selectedCard" class="card-detail"></card-detail>
     <button v-on:click="showRareCards" class="show-rare-cards">Show Rare Cards</button>
-    <rare-cards-list :cards="rareCards"></rare-cards-list>
+    <rare-cards-list v-if="rareCards.length > 0" :cards="rareCards"></rare-cards-list>
   </div>
 </template>
 
@@ -26,29 +27,37 @@ export default {
   },
   methods: {
     showRareCards() {
-      // eventBus.$emit('card-rared', this.cards)
-      for (var card in this.cards.cards) {
+      for (var card of this.cards) {
         if (card.rarity === "Rare") {
           this.rareCards.push(card);
         }
       }
+    },
+    removeDuplicates(cards){
+      let uniqueCards = [];
+      for (let myCard of cards.cards) {
+        if (myCard.hasOwnProperty("imageUrl")) {
+          uniqueCards.push(myCard);
+        }
+      }
+
+      return uniqueCards;
     }
   },
   mounted(){
     fetch('https://api.magicthegathering.io/v1/cards')
     .then(result => result.json())
-    .then(cards => this.cards = cards)
+    .then((cards) => {
+      this.cards = this.removeDuplicates(cards);
+    })
 
     eventBus.$on('card-selected', (card) => {
       this.selectedCard = card;
     })
     eventBus.$on('card-removed', () => {
-      let result = this.cards.cards.indexOf(this.selectedCard)
-      this.cards.cards.splice(result, 1);
+      let result = this.cards.indexOf(this.selectedCard)
+      this.cards.splice(result, 1);
     })
-    // eventBus.$on('card-rared', (card) => {
-    //   this.rareCards.push(card);
-    // })
   },
   components: {
     'card-dropdown': CardDropdown,

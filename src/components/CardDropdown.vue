@@ -1,13 +1,13 @@
 <template lang="html">
-  <div class="">
+  <div >
     <h3>Select a Card:</h3>
     <select v-model="card" v-on:change="handleChoice">
       <option disabled value="">Select a card...</option>
-      <option v-for="card in cards.cards" :value="card">{{card.name}}</option>
+      <option v-for="card in cards" :value="card">{{card.name}}</option>
     </select>
   </div>
   <!-- <ul>
-  <list-entry v-for="(card, index) in cards.cards" :card="card" :key="index"></list-entry>
+  <list-entry v-for="(card, index) in cards" :card="card" :key="index"></list-entry>
 </ul> -->
 
 </template>

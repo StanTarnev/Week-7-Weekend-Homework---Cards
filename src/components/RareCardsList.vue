@@ -2,7 +2,7 @@
   <div class="">
     <h3>Rare Cards:</h3>
     <ul>
-      <list-entry v-for="(card, index) in cards.cards" :card="card" :key="index"></list-entry>
+      <list-entry v-for="(card, index) in cards" :card="card" :key="index">{{card.name}}</list-entry>
     </ul>
   </div>
 
