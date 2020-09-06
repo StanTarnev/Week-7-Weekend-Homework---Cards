@@ -45,7 +45,7 @@ export default {
     }
   },
   mounted(){
-    fetch('https://api.magicthegathering.io/v1/cards')
+    fetch('http://localhost:3000/cards-data')
     .then(result => result.json())
     .then((cards) => {
       this.cards = this.removeDuplicates(cards);
