@@ -1,7 +1,7 @@
 <template lang="html">
-  <div class="body">
-    <h1>Magic: The Gathering Cards</h1>
-    <p v-if="!cards">Loading...</p>
+  <div id="app">
+    <cards-header title="Magic: The Gathering Cards" />
+    <cards-header v-if="!cards" title="LOADING..."/>
     <card-dropdown :cards="cards" class="dropdown"></card-dropdown>
     <card-detail :card="selectedCard" class="card-detail"></card-detail>
     <button v-on:click="showRareCards" class="show-rare-cards">Show Rare Cards</button>
@@ -15,6 +15,7 @@ import {eventBus} from './main.js';
 import CardDropdown from './components/CardDropdown.vue';
 import CardDetail from  './components/CardDetail.vue';
 import RareCardsList from './components/RareCardsList';
+import CardsHeader from './components/CardsHeader';
 
 export default {
   name: 'app',
@@ -62,26 +63,12 @@ export default {
   components: {
     'card-dropdown': CardDropdown,
     'card-detail': CardDetail,
-    'rare-cards-list': RareCardsList
+    'rare-cards-list': RareCardsList,
+    'cards-header': CardsHeader
   }
 }
 </script>
 
 <style lang="css" scoped>
-  /* .body {
-    background-image: url("https://a-static.besthdwallpaper.com/magic-the-gathering-wallpaper-2560x1440-1539_51.jpg");
-    background-size: 100%;
-    font-family: fantasy;
-  }
-  .card-detail {
-    border: solid 2px red;
-    border-radius: 10px;
-    background-color: papayawhip;
-    padding: 20px;
-    margin: 10px;
 
-  }
-  .dropdown .show-rare-cards {
-    margin: 20px;
-  } */
 </style>
