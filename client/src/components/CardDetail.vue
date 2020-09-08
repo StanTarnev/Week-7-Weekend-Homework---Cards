@@ -1,27 +1,29 @@
 <template lang="html">
-  <div v-if="card">
-    <h3>{{card.name}}</h3>
+  <div id="image-details" v-if="card">
     <img :src='card.imageUrl'/>
-    <p>{{card.rarity}}</p>
-    <p>Artist: {{card.artist}}</p>
-    <button v-on:click="removeFromList">Remove Card</button>
+    <div id="details">
+      <h3>{{card.name}}</h3>
+      <p>{{card.rarity}}</p>
+      <p>Artist: {{card.artist}}</p>
+    </div>
   </div>
 </template>
 
 <script>
-import {eventBus} from '../main.js';
 
 export default {
   name: 'card-detail',
-  props:['card'],
-  methods: {
-    removeFromList() {
-      eventBus.$emit('card-removed', this.card)
-    }
-  }
+  props:['card']
 }
 </script>
 
 <style lang="css" scoped>
+#image-details {
+  display: flex;
+  justify-content: space-around;
+}
 
+img {
+  height: 25em;
+}
 </style>

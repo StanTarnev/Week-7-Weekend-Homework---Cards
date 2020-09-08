@@ -2,20 +2,19 @@
   <div id="app">
     <cards-header title="Magic: The Gathering Cards" />
     <cards-header v-if="!cards" title="LOADING..."/>
-    <card-dropdown :cards="cards" class="dropdown"></card-dropdown>
-    <card-detail :card="selectedCard" class="card-detail"></card-detail>
-    <button v-on:click="showRareCards" class="show-rare-cards">Show Rare Cards</button>
-    <rare-cards-list v-if="rareCards.length > 0" :cards="rareCards"></rare-cards-list>
+    <div id="list-info" v-if="cards">
+      <card-list :cards="cards" />
+      <card-detail v-if="selectedCard" :card="selectedCard" />
+    </div>
   </div>
 </template>
 
 <script>
 import {eventBus} from './main.js';
 
-import CardDropdown from './components/CardDropdown.vue';
 import CardDetail from  './components/CardDetail.vue';
-import RareCardsList from './components/RareCardsList';
 import CardsHeader from './components/CardsHeader';
+import CardList from './components/CardList';
 
 export default {
   name: 'app',
@@ -23,17 +22,9 @@ export default {
     return{
       cards: [],
       selectedCard: null,
-      rareCards: []
     }
   },
   methods: {
-    showRareCards() {
-      for (var card of this.cards) {
-        if (card.rarity === "Rare") {
-          this.rareCards.push(card);
-        }
-      }
-    },
     removeDuplicates(cards){
       let uniqueCards = [];
       for (let myCard of cards.cards) {
@@ -55,20 +46,17 @@ export default {
     eventBus.$on('card-selected', (card) => {
       this.selectedCard = card;
     })
-    eventBus.$on('card-removed', () => {
-      let result = this.cards.indexOf(this.selectedCard)
-      this.cards.splice(result, 1);
-    })
   },
   components: {
-    'card-dropdown': CardDropdown,
     'card-detail': CardDetail,
-    'rare-cards-list': RareCardsList,
-    'cards-header': CardsHeader
+    'cards-header': CardsHeader,
+    'card-list': CardList
   }
 }
 </script>
 
 <style lang="css" scoped>
-
+#list-info {
+  display: flex;
+}
 </style>
