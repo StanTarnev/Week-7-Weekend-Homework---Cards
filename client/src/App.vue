@@ -2,9 +2,9 @@
   <div id="app">
     <div id="header">
       <img id="mtg-logo" src="./assets/mtg-logo.jpg" alt="Magic: The Gathering Logo">
-      <h1 id="title">CARDS</h1>
+      <h1 id="title">CARDS, 10th Edition</h1>
     </div>
-    <h1 v-if="!cards.length">LOADING..."</h1>
+    <h1 v-if="!cards.length">LOADING...</h1>
     <h3 id="click-instruction">Click on a card to see details</h3>
     <div id="list-info" v-if="cards">
       <card-list :cards="cards" />
@@ -31,7 +31,7 @@ export default {
     removeDuplicates(cards){
       let uniqueCards = [];
       for (let myCard of cards.cards) {
-        if (myCard.hasOwnProperty("imageUrl")) {
+        if (myCard.hasOwnProperty("imageUrl") && myCard.set === "10E") {
           uniqueCards.push(myCard);
         }
       }
@@ -71,7 +71,7 @@ body {
 #header {
   display: flex;
   justify-content: space-around;
-  width: 70%;
+  width: 85%;
 }
 
 #mtg-logo {
@@ -86,6 +86,6 @@ body {
 
 #title {
   color: orange;
-  font-weight: bold; 
+  font-weight: bold;
 }
 </style>
