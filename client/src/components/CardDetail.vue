@@ -1,12 +1,15 @@
 <template lang="html">
   <div id="image-details" v-if="card">
-    <img :src='card.imageUrl'/>
+    <div id="image-wrapper">
+      <img :src='card.imageUrl'/>
+    </div>
     <div id="details">
-      <h3>{{card.name}}</h3>
+      <h2>{{card.name}}</h2>
       <p>{{card.flavor}}</p>
-      <h4>{{card.type}}</h4>
-      <h4>{{card.rarity}}</h4>
-      <p>Artist: {{card.artist}}</p>
+      <h4><span>Type:  </span>{{card.type}}</h4>
+      <h4><span>Rarity:  </span>{{card.rarity}}</h4>
+      <p>{{card.text}}</p>
+      <p><span>Artist:  </span>{{card.artist}}</p>
     </div>
   </div>
 </template>
@@ -23,9 +26,36 @@ export default {
 #image-details {
   display: flex;
   justify-content: space-around;
+  width: 53%;
 }
 
 img {
   height: 25em;
+}
+
+#image-wrapper {
+  background-color: white;
+  height: min-content;
+  padding: 7px 7px 0 7px;
+  border-radius: 11px;
+  border: 6px solid red;
+}
+
+#details {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 40%;
+  height: 87%
+}
+
+h2, span {
+  text-decoration: underline;
+  color: orange;
+}
+
+h2 {
+  margin-top: 0;
 }
 </style>

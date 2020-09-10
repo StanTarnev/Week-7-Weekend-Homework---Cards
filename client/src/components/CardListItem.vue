@@ -30,4 +30,8 @@ button {
   border: none;
   cursor: pointer;
 }
+
+img {
+  height: 15em;
+}
 </style>

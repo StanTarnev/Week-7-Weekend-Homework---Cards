@@ -18,12 +18,15 @@ export default {
 
 <style lang="css" scoped>
 #card-list {
-  width: 47%;
-  min-width: 47%;
-  height: 550px;
-  overflow-y: scroll;
+  width: 41%;
+  height: 560px;
+  overflow-y: auto;
   display: flex;
   flex-wrap: wrap;
+  background-color: white;
+  padding: 12px 0 12px 12px;
+  border: 6px solid red;
+  border-radius: 11px;
 }
 
 </style>
