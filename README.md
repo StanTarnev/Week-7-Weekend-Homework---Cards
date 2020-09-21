@@ -19,7 +19,7 @@ $ npm install
 $ npm run serve
 ```
 
-* Inside the server folder:
+* (In a new terminal) Inside the server folder:
 
 ```
 $ npm install
