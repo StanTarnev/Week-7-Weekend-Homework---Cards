@@ -6,6 +6,7 @@
         </div>
         <h1 v-if="!cards.length">LOADING...</h1>
         <button v-on:click="show('Rare')">Show Rare</button>
+        <button v-on:click="show('Uncommon')">Show Uncommon</button>
         <h3 id="click-instruction">Click on a card to see details</h3>
         <div id="list-info" v-if="cards">
             <card-list :cards="cards" />
@@ -25,6 +26,7 @@ export default {
     data(){
         return{
             cards: [],
+            originalCards: [],
             selectedCard: null,
         }
     },
@@ -40,7 +42,7 @@ export default {
             return uniqueCards;
         },
         show(property) {
-            this.cards = this.cards.filter(card => card.rarity == property)
+            this.cards = this.originalCards.filter(card => card.rarity == property)
         }
     },
     mounted(){
@@ -48,6 +50,7 @@ export default {
         .then(result => result.json())
         .then((cards) => {
             this.cards = this.removeDuplicates(cards);
+            this.originalCards = this.cards;
         })
 
         eventBus.$on('card-selected', (card) => {
