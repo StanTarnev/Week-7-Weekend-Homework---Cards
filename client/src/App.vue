@@ -5,8 +5,12 @@
             <h1 id="title">CARDS, 10th Edition</h1>
         </div>
         <h1 v-if="!cards.length">LOADING...</h1>
-        <button v-on:click="show('Rare')">Show Rare</button>
-        <button v-on:click="show('Uncommon')">Show Uncommon</button>
+        <label for="show_by">Show: </label>
+        <select id="show_by">
+            <option value="" hidden>by Rarity</option>
+            <option v-on:click="show('Rare')">Rare</option>
+            <option v-on:click="show('Uncommon')">Uncommon</option>
+        </select>
         <h3 id="click-instruction">Click on a card to see details</h3>
         <div id="list-info" v-if="cards">
             <card-list :cards="cards" />
