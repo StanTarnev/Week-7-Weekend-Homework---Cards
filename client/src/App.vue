@@ -2,7 +2,7 @@
     <div id="app">
         <div id="header">
             <img id="mtg-logo" src="./assets/mtg-logo.jpg" alt="Magic: The Gathering Logo">
-            <h1 id="title">CARDS, 10th Edition</h1>
+            <h1 id="title">The Plane of Ravnica</h1>
         </div>
         <h1 v-if="!cards.length">LOADING...</h1>
         <label for="show_by">Show: </label>
