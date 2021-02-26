@@ -5,11 +5,11 @@
     </div>
     <div id="details">
       <h2>{{card.name}}</h2>
-      <p><span>Artist:  </span>{{card.artist}}</p>
+      <h4><span>Artist:  </span>{{card.artist}}</h4>
       <h4><span>Set:  </span>{{card.setName}}</h4>
       <h4><span>Type:  </span>{{card.type}}</h4>
       <h4><span>Rarity:  </span>{{card.rarity}}</h4>
-      <p>{{card.flavor}}</p>
+      <h4>{{card.flavor}}</h4>
     </div>
   </div>
 </template>
