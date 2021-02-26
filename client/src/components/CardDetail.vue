@@ -9,7 +9,7 @@
       <h4><span>Set:  </span>{{card.setName}}</h4>
       <h4><span>Type:  </span>{{card.type}}</h4>
       <h4><span>Rarity:  </span>{{card.rarity}}</h4>
-      <h4 id="flavor">{{card.flavor}}</h4 id="flavor">
+      <h4 id="flavor">{{card.flavor}}</h4>
     </div>
   </div>
 </template>
