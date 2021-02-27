@@ -4,23 +4,24 @@
             <img id="mtg-logo" src="./assets/mtg-logo.jpg" alt="Magic: The Gathering Logo">
             <h1 id="title">The Plane of Ravnica</h1>
         </div>
-
         <h1 v-if="!cards.length">LOADING...</h1>
-
-        <div id="filters">
-            <label for="show_by">Show: </label>
-            <select id="show_by">
-                <option value="" hidden>by Rarity</option>
-                <option v-on:click="show('Rare')">Rare</option>
-                <option v-on:click="show('Uncommon')">Uncommon</option>
-            </select>
-        </div>
-
-        <h3 id="click-instruction">Click on a card to see details</h3>
-        
         <div id="list-info" v-if="cards">
-            <card-list :cards="cards" />
-            <card-detail v-if="selectedCard" :card="selectedCard" />
+            <div id="left-side">
+                <h3 id="click-instruction">Click on a card to see details</h3>
+                <card-list :cards="cards" />
+            </div>
+            <div id="right-side">
+                <div id="filters">
+                    <label for="show_by">Show: </label>
+                    <select id="show_by">
+                        <option value="" hidden>by Rarity</option>
+                        <option v-on:click="show('Rare')">Rare</option>
+                        <option v-on:click="show('Uncommon')">Uncommon</option>
+                    </select>
+                </div>
+                <card-detail v-if="selectedCard" :card="selectedCard" />
+            </div>
+
         </div>
     </div>
 </template>
@@ -104,5 +105,13 @@ body {
 #title {
     color: orange;
     font-weight: bold;
+}
+
+#right-side {
+    width: 53%;
+}
+
+#left-side {
+    width: 42%;
 }
 </style>

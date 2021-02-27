@@ -18,7 +18,6 @@ export default {
 
 <style lang="css" scoped>
 #card-list {
-  width: 41%;
   height: 560px;
   overflow-y: auto;
   display: flex;
