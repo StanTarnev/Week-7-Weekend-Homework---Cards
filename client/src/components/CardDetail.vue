@@ -60,5 +60,6 @@ h2 {
 
 #flavor {
     color: red;
+    margin-bottom: 0;
 }
 </style>
