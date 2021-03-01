@@ -45,7 +45,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 40%;
+  width: 40%;
   height: 87%
 }
 
