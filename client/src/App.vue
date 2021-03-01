@@ -12,9 +12,9 @@
             </div>
             <div id="right-side">
                 <div id="filters">
-                    <label for="show_by">Show: </label>
+                    <label for="show_by">Rarity: </label>
                     <select id="show_by">
-                        <option value="" hidden>by Rarity</option>
+                        <option value="" hidden>Choose...</option>
                         <option v-on:click="show('Rare')">Rare</option>
                         <option v-on:click="show('Uncommon')">Uncommon</option>
                     </select>
