@@ -109,7 +109,7 @@ body {
 }
 
 #right-side {
-    width: 53%;
+    width: 55%;
 }
 
 #left-side {

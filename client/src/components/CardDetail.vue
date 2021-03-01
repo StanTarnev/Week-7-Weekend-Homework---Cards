@@ -25,7 +25,7 @@ export default {
 <style lang="css" scoped>
 #image-details {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 img {
