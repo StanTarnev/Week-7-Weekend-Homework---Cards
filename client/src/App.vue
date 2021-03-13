@@ -2,7 +2,7 @@
     <div id="app">
         <div id="header">
             <img id="mtg-logo" src="./assets/mtg-logo.jpg" alt="Magic: The Gathering Logo">
-            <h1 id="title">The Plane of Ravnica</h1>
+            <h1 id="title">Ravnica</h1>
         </div>
         <h1 v-if="!cards.length">LOADING...</h1>
         <div id="list-info" v-if="cards">
@@ -104,8 +104,10 @@ body {
 }
 
 #title {
-    color: orange;
+    color: red;
     font-weight: bold;
+    font-size: xxx-large;
+    margin: 0 0 20px 0;
 }
 
 #right-side {
