@@ -15,8 +15,10 @@
                     <label for="show_by">Rarity: </label>
                     <select id="show_by">
                         <option value="" hidden>Choose...</option>
-                        <option v-on:click="show('Rare')">Rare</option>
-                        <option v-on:click="show('Uncommon')">Uncommon</option>
+                        <option v-on:click="filterBy('Common')">Common</option>
+                        <option v-on:click="filterBy('Uncommon')">Uncommon</option>
+                        <option v-on:click="filterBy('Rare')">Rare</option>
+                        <option v-on:click="filterBy('Mythic')">Mythic</option>
                     </select>
                 </div>
                 <card-detail v-if="selectedCard" :card="selectedCard" />
@@ -53,7 +55,7 @@ export default {
 
             return uniqueCards;
         },
-        show(property) {
+        filterBy(property) {
             this.cards = this.originalCards.filter(card => card.rarity == property)
         }
     },
