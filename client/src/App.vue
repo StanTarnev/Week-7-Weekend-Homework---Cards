@@ -47,8 +47,8 @@ export default {
         removeDuplicates(cards){
             let uniqueCards = [];
             for (let myCard of cards.cards) {
-                if (myCard.hasOwnProperty("imageUrl") && (myCard.set === "RAV" || myCard.set === "GPT" || myCard.set === "DIS" || myCard.set === "RTR" || myCard.set === "GTC" || myCard.set === "DGM" || myCard.set === "GRN" || myCard.set === "RNA" || myCard.set === "WAR")) {
-                // if (myCard.hasOwnProperty("imageUrl")) {
+                // if (myCard.hasOwnProperty("imageUrl") && (myCard.set === "RAV" || myCard.set === "GPT" || myCard.set === "DIS" || myCard.set === "RTR" || myCard.set === "GTC" || myCard.set === "DGM" || myCard.set === "GRN" || myCard.set === "RNA" || myCard.set === "WAR")) {
+                if (myCard.hasOwnProperty("imageUrl") && myCard.set === "10E") {
                     uniqueCards.push(myCard);
                 }
             }

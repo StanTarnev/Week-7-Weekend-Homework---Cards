@@ -10,8 +10,8 @@ app.get('/', (req, res) => {
 })
 
 app.get('/cards-data', (req, res) => {
-  const promises = [160, 161, 162, 163, 164, 208, 209, 210, 211, 212, 213, 214, 215, 216, 458, 459, 460, 461, 466, 467, 468, 471, 472, 473, 474, 539, 540, 541, 542].map(num => {
-  // const promises = [1, 2, 3, 4, 5, 6].map(num => {
+  // const promises = [160, 161, 162, 163, 164, 208, 209, 210, 211, 212, 213, 214, 215, 216, 458, 459, 460, 461, 466, 467, 468, 471, 472, 473, 474, 539, 540, 541, 542].map(num => {
+  const promises = [1, 2, 3, 4, 5, 6].map(num => {
     return fetch(`https://api.magicthegathering.io/v1/cards?page=${num}&per_page=100`)
       .then(res => res.json());
   });
