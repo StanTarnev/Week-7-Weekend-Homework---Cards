@@ -18,7 +18,7 @@
                         <option v-on:click="filterBy('Common')">Common</option>
                         <option v-on:click="filterBy('Uncommon')">Uncommon</option>
                         <option v-on:click="filterBy('Rare')">Rare</option>
-                        <option v-on:click="filterBy('Mythic')">Mythic</option>
+                        <!-- <option v-on:click="filterBy('Mythic')">Mythic</option> -->
                     </select>
                 </div>
                 <card-detail v-if="selectedCard" :card="selectedCard" />
