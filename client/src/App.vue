@@ -100,7 +100,7 @@ body {
 }
 
 #click-instruction {
-    padding-left: 13%;
+    text-align: center;
     margin-bottom: 3px;
     margin-top: 10px;
 }
