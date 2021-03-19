@@ -46,7 +46,7 @@ img {
   flex-direction: column;
   justify-content: space-between;
   width: 40%;
-  height: 87%
+  /* height: 87% */
 }
 
 h2, span {
