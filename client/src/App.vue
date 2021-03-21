@@ -276,7 +276,6 @@
                 </div>
                 <card-detail v-if="selectedCard" :card="selectedCard" />
             </div>
-
         </div>
     </div>
 </template>
