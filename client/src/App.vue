@@ -12,11 +12,11 @@
             </div>
             <div id="right-side">
                 <div id="filters">
+                    <button v-on:click="showAll">See All</button>
                     <div id="rarity-filter">
                         <label for="show-by-rarity">Rarity: </label>
                         <select id="show-by-rarity">
                             <option value="" hidden>Choose...</option>
-                            <option v-on:click="showAll">All</option>
                             <option v-on:click="filterByRarity('Common')">Common</option>
                             <option v-on:click="filterByRarity('Uncommon')">Uncommon</option>
                             <option v-on:click="filterByRarity('Rare')">Rare</option>
@@ -26,7 +26,6 @@
                         <label for="show-by-type">Type: </label>
                         <select id="show-by-type">
                             <option value="" hidden>Choose...</option>
-                            <option v-on:click="showAll">All</option>
                             <option v-on:click="filterByType('Creature — Human Cleric')">Creature — Human Cleric</option>
                             <option v-on:click="filterByType('Creature — Angel')">Creature — Angel</option>
                             <option v-on:click="filterByType('Creature — Bird Soldier')">Creature — Bird Soldier</option>
@@ -155,7 +154,6 @@
                         <label for="show-by-artist">Artist: </label>
                         <select id="show-by-artist">
                             <option value="" hidden>Choose...</option>
-                            <option v-on:click="showAll">All</option>
                             <option v-on:click="filterByArtist('Pete Venters')">Pete Venters</option>
                             <option v-on:click="filterByArtist('Volkan Baǵa')">Volkan Baǵa</option>
                             <option v-on:click="filterByArtist('Justin Sweet')">Justin Sweet</option>
@@ -388,8 +386,12 @@ body {
     display: flex;
 }
 
-#show-by-rarity, #show-by-type, #show-by-artist {
+#show-by-rarity, #show-by-type, #show-by-artist, button {
     font-family: inherit;
     font-weight: bold;
+}
+
+button {
+    background-color: white;
 }
 </style>
