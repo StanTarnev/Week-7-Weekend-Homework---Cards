@@ -383,4 +383,8 @@ body {
 #left-side {
     width: 42%;
 }
+
+#filters {
+    display: flex;
+}
 </style>
