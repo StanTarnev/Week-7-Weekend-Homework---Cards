@@ -17,9 +17,9 @@
                         <select id="show_by">
                             <option value="" hidden>Choose...</option>
                             <option v-on:click="showAll">All</option>
-                            <option v-on:click="filterBy('Common')">Common</option>
-                            <option v-on:click="filterBy('Uncommon')">Uncommon</option>
-                            <option v-on:click="filterBy('Rare')">Rare</option>
+                            <option v-on:click="filterByRarity('Common')">Common</option>
+                            <option v-on:click="filterByRarity('Uncommon')">Uncommon</option>
+                            <option v-on:click="filterByRarity('Rare')">Rare</option>
                         </select>
                     </div>
                     <div id="type-filter">
@@ -310,7 +310,7 @@ export default {
 
             return uniqueCards;
         },
-        filterBy(property) {
+        filterByRarity(property) {
             this.cards = this.originalCards.filter(card => card.rarity == property)
         },
         showAll() {
