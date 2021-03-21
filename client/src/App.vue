@@ -13,8 +13,8 @@
             <div id="right-side">
                 <div id="filters">
                     <div id="rarity-filter">
-                        <label for="show_by">Rarity: </label>
-                        <select id="show_by">
+                        <label for="show-by-rarity">Rarity: </label>
+                        <select id="show-by-rarity">
                             <option value="" hidden>Choose...</option>
                             <option v-on:click="showAll">All</option>
                             <option v-on:click="filterByRarity('Common')">Common</option>
@@ -23,8 +23,8 @@
                         </select>
                     </div>
                     <div id="type-filter">
-                        <label for="show_by">Type: </label>
-                        <select id="show_by">
+                        <label for="show-by-type">Type: </label>
+                        <select id="show-by-type">
                             <option value="" hidden>Choose...</option>
                             <option v-on:click="showAll">All</option>
                             <option v-on:click="filterByType('Creature — Human Cleric')">Creature — Human Cleric</option>
@@ -152,8 +152,8 @@
                         </select>
                     </div>
                     <div id="artist-filter">
-                        <label for="show_by">Artist: </label>
-                        <select id="show_by">
+                        <label for="show-by-artist">Artist: </label>
+                        <select id="show-by-artist">
                             <option value="" hidden>Choose...</option>
                             <option v-on:click="showAll">All</option>
                             <option v-on:click="filterByArtist('Pete Venters')">Pete Venters</option>
@@ -386,5 +386,10 @@ body {
 
 #filters {
     display: flex;
+}
+
+#show-by-rarity, #show-by-type, #show-by-artist {
+    font-family: inherit;
+    font-weight: bold;
 }
 </style>
