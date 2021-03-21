@@ -389,6 +389,7 @@ body {
 #show-by-rarity, #show-by-type, #show-by-artist, button {
     font-family: inherit;
     font-weight: bold;
+    border-radius: 3px;
 }
 
 button {
