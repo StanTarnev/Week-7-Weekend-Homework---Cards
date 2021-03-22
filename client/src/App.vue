@@ -7,6 +7,7 @@
         <h1 v-if="!cards.length">LOADING...</h1>
         <div id="list-info" v-if="cards">
             <div id="left-side">
+                <h3>{{description}}</h3>
                 <h3 id="click-instruction">Click on a card to see details</h3>
                 <card-list :cards="cards" />
             </div>
@@ -293,6 +294,7 @@ export default {
             cards: [],
             originalCards: [],
             selectedCard: null,
+            description: 'All Cards'
         }
     },
     methods: {
@@ -308,16 +310,20 @@ export default {
             return uniqueCards;
         },
         filterByRarity(property) {
-            this.cards = this.originalCards.filter(card => card.rarity == property)
+            this.cards = this.originalCards.filter(card => card.rarity == property);
+            this.description = 'Rarity: ' + property;
         },
         filterByType(property) {
-            this.cards = this.originalCards.filter(card => card.type == property)
+            this.cards = this.originalCards.filter(card => card.type == property);
+            this.description = 'Type: ' + property;
         },
         filterByArtist(property) {
-            this.cards = this.originalCards.filter(card => card.artist == property)
+            this.cards = this.originalCards.filter(card => card.artist == property);
+            this.description = 'Artist: ' + property;
         },
         showAll() {
             this.cards = this.originalCards;
+            this.description = 'All Cards';
         }
     },
     mounted(){
