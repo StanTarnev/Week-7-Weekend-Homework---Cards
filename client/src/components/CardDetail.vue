@@ -26,6 +26,7 @@ export default {
   display: flex;
   justify-content: space-evenly;
   width: 94%;
+  margin-top: 60px;
 }
 
 img {

@@ -384,6 +384,7 @@ body {
 #filters {
     display: flex;
     justify-content: space-around;
+    margin-top: 42px;
 }
 
 #show-by-rarity, #show-by-type, #show-by-artist, button {
