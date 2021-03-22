@@ -383,6 +383,7 @@ body {
 
 #filters {
     display: flex;
+    justify-content: space-around;
 }
 
 #show-by-rarity, #show-by-type, #show-by-artist, button {
