@@ -7,10 +7,7 @@
         <h1 v-if="!cards.length">LOADING...</h1>
         <div id="list-info" v-if="cards">
             <div id="left-side">
-                <div id="description-instruction">
-                    <h3 id="description"><span>{{filterKey}}</span> {{filterValue}}</h3>
-                    <h3 id="click-instruction">Click for details</h3>
-                </div>
+                <h3 id="description"><span>{{filterKey}}</span> {{filterValue}}</h3>
                 <card-list :cards="cards" />
             </div>
             <div id="right-side">
@@ -378,15 +375,8 @@ body {
     height: 5em;
 }
 
-#click-instruction, #description {
-    text-align: center;
-    margin-bottom: 3px;
-    margin-top: 10px;
-}
-
-#description-instruction {
-    display: flex;
-    justify-content: space-around;
+#description {
+    margin: 10px 0 3px 24px;
 }
 
 #title {
