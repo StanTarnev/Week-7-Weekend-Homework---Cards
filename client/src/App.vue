@@ -374,7 +374,7 @@ body {
 }
 
 #right-side {
-    width: 55%;
+    width: 58%;
 }
 
 #left-side {
