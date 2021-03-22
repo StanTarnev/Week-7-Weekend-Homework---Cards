@@ -2,7 +2,7 @@
     <div id="app">
         <div id="header">
             <img id="mtg-logo" src="./assets/mtg-logo.jpg" alt="Magic: The Gathering Logo">
-            <h1 id="title">10th Edition</h1>
+            <h1 id="title">Card Set, 10th Edition</h1>
         </div>
         <h1 v-if="!cards.length">LOADING...</h1>
         <div id="list-info" v-if="cards">
@@ -352,8 +352,8 @@ body {
 
 #header {
     display: flex;
-    justify-content: space-around;
-    width: 85%;
+    justify-content: space-evenly;
+    width: 89%;
 }
 
 #mtg-logo {
