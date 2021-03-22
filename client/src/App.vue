@@ -8,7 +8,7 @@
         <div id="list-info" v-if="cards">
             <div id="left-side">
                 <div id="description-instruction">
-                    <h3 id="description">{{description}}</h3>
+                    <h3 id="description"><span>{{filterKey}}</span> {{filterValue}}</h3>
                     <h3 id="click-instruction">Click for details</h3>
                 </div>
                 <card-list :cards="cards" />
@@ -296,7 +296,9 @@ export default {
             cards: [],
             originalCards: [],
             selectedCard: null,
-            description: 'All Cards'
+            // description: 'All Cards',
+            filterKey: 'All Cards',
+            filterValue: null
         }
     },
     methods: {
@@ -313,19 +315,27 @@ export default {
         },
         filterByRarity(property) {
             this.cards = this.originalCards.filter(card => card.rarity == property);
-            this.description = 'Rarity: ' + property;
+            // this.description = 'Rarity: ' + property;
+            this.filterKey = 'Rarity:';
+            this.filterValue = property;
         },
         filterByType(property) {
             this.cards = this.originalCards.filter(card => card.type == property);
-            this.description = 'Type: ' + property;
+            // this.description = 'Type: ' + property;
+            this.filterKey = 'Type:';
+            this.filterValue = property;
         },
         filterByArtist(property) {
             this.cards = this.originalCards.filter(card => card.artist == property);
-            this.description = 'Artist: ' + property;
+            // this.description = 'Artist: ' + property;
+            this.filterKey = 'Artist:';
+            this.filterValue = property;
         },
         showAll() {
             this.cards = this.originalCards;
-            this.description = 'All Cards';
+            // this.description = 'All Cards';
+            this.filterKey = 'All Cards';
+            this.filterValue = null;
         }
     },
     mounted(){
@@ -408,5 +418,10 @@ body {
 
 button {
     background-color: white;
+}
+
+span {
+  text-decoration: underline;
+  color: orange;
 }
 </style>
