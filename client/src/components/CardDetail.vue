@@ -44,7 +44,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 40%;
+  width: 48%;
   margin-left: 7%
 }
 
