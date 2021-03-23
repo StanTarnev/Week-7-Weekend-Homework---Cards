@@ -24,8 +24,6 @@ export default {
 <style lang="css" scoped>
 #image-details {
   display: flex;
-  justify-content: space-evenly;
-  width: 94%;
   margin-top: 60px;
 }
 
@@ -39,14 +37,15 @@ img {
   padding: 7px 7px 0 7px;
   border-radius: 11px;
   border: 6px solid red;
+  margin-left: 6%;
 }
 
 #details {
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 40%;
+  margin-left: 7%
 }
 
 h2, span {
