@@ -4,11 +4,13 @@
       <img :src='card.imageUrl'/>
     </div>
     <div id="details">
-      <h2>{{card.name}}</h2>
-      <h4><span>Artist:  </span>{{card.artist}}</h4>
-      <h4><span>Type:  </span>{{card.type}}</h4>
-      <h4><span>Rarity:  </span>{{card.rarity}}</h4>
-      <h4 id="flavor">{{card.flavor}}</h4>
+        <div id='name-artist-type-rarity'>
+            <h2>{{card.name}}</h2>
+            <h4><span>Artist:  </span>{{card.artist}}</h4>
+            <h4><span>Type:  </span>{{card.type}}</h4>
+            <h4><span>Rarity:  </span>{{card.rarity}}</h4>
+        </div>
+        <h4 id="flavor">{{card.flavor}}</h4>
     </div>
   </div>
 </template>
@@ -55,10 +57,20 @@ h2, span {
 
 h2 {
   margin-top: 0;
+  margin-bottom: 25px;
 }
 
 #flavor {
     color: red;
-    margin-bottom: 0;
+    margin: 0 0 20px 0;
+}
+
+h4 {
+    margin: 27px 0;
+}
+
+#name-artist-type-rarity {
+    display: flex;
+    flex-direction: column;
 }
 </style>
