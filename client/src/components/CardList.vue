@@ -26,6 +26,7 @@ export default {
   padding: 12px 0 12px 12px;
   border: 6px solid red;
   border-radius: 11px;
+  align-content: flex-start;
 }
 
 </style>
