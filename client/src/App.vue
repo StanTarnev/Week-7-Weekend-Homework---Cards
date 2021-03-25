@@ -11,6 +11,12 @@
                 <card-list :cards="cards" />
             </div>
             <div id="right-side">
+                <select>
+                    <option value="" hidden>Choose...</option>
+                    <option v-for="rarity in uniqueRarities" :value="rarity">
+                        {{rarity}}
+                    </option>
+                </select>
                 <div id="filters">
                     <button v-on:click="showAll">See All</button>
                     <div id="rarity-filter">
@@ -333,6 +339,11 @@ export default {
             // this.description = 'All Cards';
             this.filterKey = 'All Cards';
             this.filterValue = null;
+        }
+    },
+    computed: {
+        uniqueRarities() {
+            return [...new Set(this.cards.map(card => card.rarity))]
         }
     },
     mounted(){
