@@ -11,7 +11,7 @@
                 <card-list :cards="cards" />
             </div>
             <div id="right-side">
-                <select>
+                <select v-model="value" v-on:change="filterByRarity(value)">
                     <option value="" hidden>Choose...</option>
                     <option v-for="rarity in uniqueRarities" :value="rarity">
                         {{rarity}}
