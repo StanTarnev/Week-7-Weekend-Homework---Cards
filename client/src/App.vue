@@ -11,21 +11,15 @@
                 <card-list :cards="cards" />
             </div>
             <div id="right-side">
-                <select v-model="selectedRarity" v-on:change="filterByRarity(selectedRarity)">
-                    <option value="" hidden>Choose...</option>
-                    <option v-for="rarity in uniqueRarities" :value="rarity">
-                        {{rarity}}
-                    </option>
-                </select>
                 <div id="filters">
                     <button v-on:click="showAll">See All</button>
                     <div id="rarity-filter">
                         <label for="show-by-rarity">Rarity: </label>
-                        <select id="show-by-rarity">
-                            <option value="" hidden>Choose...</option>
-                            <option v-on:click="filterByRarity('Common')">Common</option>
-                            <option v-on:click="filterByRarity('Uncommon')">Uncommon</option>
-                            <option v-on:click="filterByRarity('Rare')">Rare</option>
+                        <select id="show-by-rarity" v-model="selectedRarity" v-on:change="filterByRarity(selectedRarity)">
+                            <option disabled hidden value="">Choose...</option>
+                            <option v-for="rarity in uniqueRarities" :value="rarity">
+                                {{rarity}}
+                            </option>
                         </select>
                     </div>
                     <div id="type-filter">
@@ -302,7 +296,7 @@ export default {
             // description: 'All Cards',
             filterKey: 'All Cards',
             filterValue: null,
-            selectedRarity: null
+            selectedRarity: ''
         }
     },
     methods: {
