@@ -11,7 +11,7 @@
                 <card-list :cards="cards" />
             </div>
             <div id="right-side">
-                <select v-model="value" v-on:change="filterByRarity(value)">
+                <select v-model="selectedRarity" v-on:change="filterByRarity(selectedRarity)">
                     <option value="" hidden>Choose...</option>
                     <option v-for="rarity in uniqueRarities" :value="rarity">
                         {{rarity}}
@@ -301,7 +301,8 @@ export default {
             selectedCard: null,
             // description: 'All Cards',
             filterKey: 'All Cards',
-            filterValue: null
+            filterValue: null,
+            selectedRarity: null
         }
     },
     methods: {
@@ -343,7 +344,7 @@ export default {
     },
     computed: {
         uniqueRarities() {
-            return [...new Set(this.cards.map(card => card.rarity))]
+            return [...new Set(this.originalCards.map(card => card.rarity))]
         }
     },
     mounted(){
