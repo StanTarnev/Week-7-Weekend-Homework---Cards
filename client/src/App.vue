@@ -174,7 +174,6 @@ export default {
             cards: [],
             originalCards: [],
             selectedCard: null,
-            // description: 'All Cards',
             filterKey: 'All Cards',
             filterValue: null,
             selectedRarity: '',
@@ -195,25 +194,21 @@ export default {
         },
         filterByRarity(property) {
             this.cards = this.originalCards.filter(card => card.rarity == property);
-            // this.description = 'Rarity: ' + property;
             this.filterKey = 'Rarity:';
             this.filterValue = property;
         },
         filterByType(property) {
             this.cards = this.originalCards.filter(card => card.type == property);
-            // this.description = 'Type: ' + property;
             this.filterKey = 'Type:';
             this.filterValue = property;
         },
         filterByArtist(property) {
             this.cards = this.originalCards.filter(card => card.artist == property);
-            // this.description = 'Artist: ' + property;
             this.filterKey = 'Artist:';
             this.filterValue = property;
         },
         showAll() {
             this.cards = this.originalCards;
-            // this.description = 'All Cards';
             this.filterKey = 'All Cards';
             this.filterValue = null;
         }
