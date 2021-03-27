@@ -24,130 +24,11 @@
                     </div>
                     <div id="type-filter">
                         <label for="show-by-type">Type: </label>
-                        <select id="show-by-type">
-                            <option value="" hidden>Choose...</option>
-                            <option v-on:click="filterByType('Creature — Human Cleric')">Creature — Human Cleric</option>
-                            <option v-on:click="filterByType('Creature — Angel')">Creature — Angel</option>
-                            <option v-on:click="filterByType('Creature — Bird Soldier')">Creature — Bird Soldier</option>
-                            <option v-on:click="filterByType('Creature — Human Rebel')">Creature — Human Rebel</option>
-                            <option v-on:click="filterByType('Instant')">Instant</option>
-                            <option v-on:click="filterByType('Creature — Human Knight')">Creature — Human Knight</option>
-                            <option v-on:click="filterByType('Legendary Creature — Human Rebel')">Legendary Creature — Human Rebel</option>
-                            <option v-on:click="filterByType('Creature — Human Soldier')">Creature — Human Soldier</option>
-                            <option v-on:click="filterByType('Creature — Spirit')">Creature — Spirit</option>
-                            <option v-on:click="filterByType('Enchantment')">Enchantment</option>
-                            <option v-on:click="filterByType('Enchantment — Aura')">Enchantment — Aura</option>
-                            <option v-on:click="filterByType('Legendary Creature — Angel')">Legendary Creature — Angel</option>
-                            <option v-on:click="filterByType('Creature — Human Wizard')">Creature — Human Wizard</option>
-                            <option v-on:click="filterByType('Creature — Elemental')">Creature — Elemental</option>
-                            <option v-on:click="filterByType('Legendary Creature — Merfolk Wizard')">Legendary Creature — Merfolk Wizard</option>
-                            <option v-on:click="filterByType('Creature — Bird Soldier Wizard')">Creature — Bird Soldier Wizard</option>
-                            <option v-on:click="filterByType('Creature — Cephalid Wizard')">Creature — Cephalid Wizard</option>
-                            <option v-on:click="filterByType('Creature — Shapeshifter')">Creature — Shapeshifter</option>
-                            <option v-on:click="filterByType('Creature — Faerie')">Creature — Faerie</option>
-                            <option v-on:click="filterByType('Sorcery')">Sorcery</option>
-                            <option v-on:click="filterByType('Creature — Serpent')">Creature — Serpent</option>
-                            <option v-on:click="filterByType('Legendary Creature — Vampire Noble')">Legendary Creature — Vampire Noble</option>
-                            <option v-on:click="filterByType('Creature — Wraith')">Creature — Wraith</option>
-                            <option v-on:click="filterByType('Creature — Merfolk')">Creature — Merfolk</option>
-                            <option v-on:click="filterByType('Creature — Bird')">Creature — Bird</option>
-                            <option v-on:click="filterByType('Creature — Beast')">Creature — Beast</option>
-                            <option v-on:click="filterByType('Creature — Metathran Wizard')">Creature — Metathran Wizard</option>
-                            <option v-on:click="filterByType('Creature — Lhurgoyf')">Creature — Lhurgoyf</option>
-                            <option v-on:click="filterByType('Creature — Human Nomad Cleric')">Creature — Human Nomad Cleric</option>
-                            <option v-on:click="filterByType('Creature — Illusion Warrior')">Creature — Illusion Warrior</option>
-                            <option v-on:click="filterByType('Creature — Human Cleric Mercenary')">Creature — Human Cleric Mercenary</option>
-                            <option v-on:click="filterByType('Creature — Zombie Crocodile')">Creature — Zombie Crocodile</option>
-                            <option v-on:click="filterByType('Creature — Skeleton')">Creature — Skeleton</option>
-                            <option v-on:click="filterByType('Creature — Imp')">Creature — Imp</option>
-                            <option v-on:click="filterByType('Creature — Horror')">Creature — Horror</option>
-                            <option v-on:click="filterByType('Creature — Zombie Insect')">Creature — Zombie Insect</option>
-                            <option v-on:click="filterByType('Creature — Human Assassin')">Creature — Human Assassin</option>
-                            <option v-on:click="filterByType('Creature — Nightmare Horse')">Creature — Nightmare Horse</option>
-                            <option v-on:click="filterByType('Legendary Creature — Avatar Minion')">Legendary Creature — Avatar Minion</option>
-                            <option v-on:click="filterByType('Creature — Insect')">Creature — Insect</option>
-                            <option v-on:click="filterByType('Creature — Rat')">Creature — Rat</option>
-                            <option v-on:click="filterByType('Creature — Zombie')">Creature — Zombie</option>
-                            <option v-on:click="filterByType('Creature — Vampire')">Creature — Vampire</option>
-                            <option v-on:click="filterByType('Creature — Minotaur')">Creature — Minotaur</option>
-                            <option v-on:click="filterByType('Creature — Giant')">Creature — Giant</option>
-                            <option v-on:click="filterByType('Creature — Cyclops')">Creature — Cyclops</option>
-                            <option v-on:click="filterByType('Creature — Elemental Spirit')">Creature — Elemental Spirit</option>
-                            <option v-on:click="filterByType('Creature — Zombie Goblin')">Creature — Zombie Goblin</option>
-                            <option v-on:click="filterByType('Creature — Human Mercenary')">Creature — Human Mercenary</option>
-                            <option v-on:click="filterByType('Creature — Specter')">Creature — Specter</option>
-                            <option v-on:click="filterByType('Creature — Crab')">Creature — Crab</option>
-                            <option v-on:click="filterByType('Creature — Zombie Spirit')">Creature — Zombie Spirit</option>
-                            <option v-on:click="filterByType('Creature — Zombie Wizard')">Creature — Zombie Wizard</option>
-                            <option v-on:click="filterByType('Creature — Elephant Cleric')">Creature — Elephant Cleric</option>
-                            <option v-on:click="filterByType('Creature — Merfolk Rogue')">Creature — Merfolk Rogue</option>
-                            <option v-on:click="filterByType('Legendary Creature — Human Barbarian')">Legendary Creature — Human Barbarian</option>
-                            <option v-on:click="filterByType('Creature — Djinn')">Creature — Djinn</option>
-                            <option v-on:click="filterByType('Creature — Shade')">Creature — Shade</option>
-                            <option v-on:click="filterByType('Creature — Demon')">Creature — Demon</option>
-                            <option v-on:click="filterByType('Creature — Goblin Mutant')">Creature — Goblin Mutant</option>
-                            <option v-on:click="filterByType('Creature — Dragon')">Creature — Dragon</option>
-                            <option v-on:click="filterByType('Creature — Goblin Warrior')">Creature — Goblin Warrior</option>
-                            <option v-on:click="filterByType('Creature — Goblin')">Creature — Goblin</option>
-                            <option v-on:click="filterByType('Creature — Zombie Warrior')">Creature — Zombie Warrior</option>
-                            <option v-on:click="filterByType('Legendary Creature — Wizard')">Legendary Creature — Wizard</option>
-                            <option v-on:click="filterByType('Creature — Orc Warrior')">Creature — Orc Warrior</option>
-                            <option v-on:click="filterByType('Creature — Goblin Berserker')">Creature — Goblin Berserker</option>
-                            <option v-on:click="filterByType('Creature — Badger Beast')">Creature — Badger Beast</option>
-                            <option v-on:click="filterByType('Creature — Wurm')">Creature — Wurm</option>
-                            <option v-on:click="filterByType('Creature — Avatar')">Creature — Avatar</option>
-                            <option v-on:click="filterByType('Creature — Spider')">Creature — Spider</option>
-                            <option v-on:click="filterByType('Creature — Elf Druid Warrior')">Creature — Elf Druid Warrior</option>
-                            <option v-on:click="filterByType('Creature — Elf')">Creature — Elf</option>
-                            <option v-on:click="filterByType('Creature — Elf Berserker')">Creature — Elf Berserker</option>
-                            <option v-on:click="filterByType('Creature — Elf Shaman')">Creature — Elf Shaman</option>
-                            <option v-on:click="filterByType('Creature — Human Archer')">Creature — Human Archer</option>
-                            <option v-on:click="filterByType('Creature — Bear')">Creature — Bear</option>
-                            <option v-on:click="filterByType('Creature — Elf Druid')">Creature — Elf Druid</option>
-                            <option v-on:click="filterByType('Creature — Yeti')">Creature — Yeti</option>
-                            <option v-on:click="filterByType('Creature — Kavu')">Creature — Kavu</option>
-                            <option v-on:click="filterByType('Legendary Creature — Cat Warrior')">Legendary Creature — Cat Warrior</option>
-                            <option v-on:click="filterByType('Legendary Creature — Elemental')">Legendary Creature — Elemental</option>
-                            <option v-on:click="filterByType('Creature — Dryad')">Creature — Dryad</option>
-                            <option v-on:click="filterByType('Creature — Rhino Beast')">Creature — Rhino Beast</option>
-                            <option v-on:click="filterByType('Creature — Cat Knight')">Creature — Cat Knight</option>
-                            <option v-on:click="filterByType('Creature — Lizard')">Creature — Lizard</option>
-                            <option v-on:click="filterByType('Artifact')">Artifact</option>
-                            <option v-on:click="filterByType('Artifact Creature — Gnome')">Artifact Creature — Gnome</option>
-                            <option v-on:click="filterByType('Artifact Creature — Golem')">Artifact Creature — Golem</option>
-                            <option v-on:click="filterByType('Artifact Creature — Juggernaut')">Artifact Creature — Juggernaut</option>
-                            <option v-on:click="filterByType('Legendary Artifact')">Legendary Artifact</option>
-                            <option v-on:click="filterByType('Artifact — Equipment')">Artifact — Equipment</option>
-                            <option v-on:click="filterByType('Artifact Creature — Insect')">Artifact Creature — Insect</option>
-                            <option v-on:click="filterByType('Artifact Creature — Thopter')">Artifact Creature — Thopter</option>
-                            <option v-on:click="filterByType('Artifact Creature — Angel')">Artifact Creature — Angel</option>
-                            <option v-on:click="filterByType('Artifact Creature — Masticore')">Artifact Creature — Masticore</option>
-                            <option v-on:click="filterByType('Land')">Land</option>
-                            <option v-on:click="filterByType('Creature — Wall')">Creature — Wall</option>
-                            <option v-on:click="filterByType('Basic Land — Plains')">Basic Land — Plains</option>
-                            <option v-on:click="filterByType('Basic Land — Island')">Basic Land — Island</option>
-                            <option v-on:click="filterByType('Basic Land — Mountain')">Basic Land — Mountain</option>
-                            <option v-on:click="filterByType('Basic Land — Forest')">Basic Land — Forest</option>
-                            <option v-on:click="filterByType('Creature — Drake')">Creature — Drake</option>
-                            <option v-on:click="filterByType('Creature — Human')">Creature — Human</option>
-                            <option v-on:click="filterByType('Creature — Wolf')">Creature — Wolf</option>
-                            <option v-on:click="filterByType('Creature — Human Monk Cleric')">Creature — Human Monk Cleric</option>
-                            <option v-on:click="filterByType('Creature — Vedalken Wizard')">Creature — Vedalken Wizard</option>
-                            <option v-on:click="filterByType('Creature — Minion')">Creature — Minion</option>
-                            <option v-on:click="filterByType('Creature — Zombie Mercenary')">Creature — Zombie Mercenary</option>
-                            <option v-on:click="filterByType('Creature — Thrull')">Creature — Thrull</option>
-                            <option v-on:click="filterByType('Creature — Bat')">Creature — Bat</option>
-                            <option v-on:click="filterByType('Creature — Human Cleric Mutant')">Creature — Human Cleric Mutant</option>
-                            <option v-on:click="filterByType('Legendary Creature — Goblin')">Legendary Creature — Goblin</option>
-                            <option v-on:click="filterByType('Creature — Cat')">Creature — Cat</option>
-                            <option v-on:click="filterByType('Creature — Antelope Beast')">Creature — Antelope Beast</option>
-                            <option v-on:click="filterByType('Creature — Basilisk')">Creature — Basilisk</option>
-                            <option v-on:click="filterByType('Creature — Viashino')">Creature — Viashino</option>
-                            <option v-on:click="filterByType('Creature — Viashino Scout')">Creature — Viashino Scout</option>
-                            <option v-on:click="filterByType('Creature — Troll Shaman')">Creature — Troll Shaman</option>
-                            <option v-on:click="filterByType('Creature — Griffin')">Creature — Griffin</option>
-                            <option v-on:click="filterByType('Basic Land — Swamp')">Basic Land — Swamp</option>
-                            <option v-on:click="filterByType('Creature — Human Druid')">Creature — Human Druid</option>
+                        <select id="show-by-type" v-model="selectedType" v-on:change="filterByType(selectedType)">
+                            <option disabled hidden value="">Choose...</option>
+                            <option v-for="type in uniqueTypes" :value="type">
+                                {{type}}
+                            </option>
                         </select>
                     </div>
                     <div id="artist-filter">
@@ -296,7 +177,8 @@ export default {
             // description: 'All Cards',
             filterKey: 'All Cards',
             filterValue: null,
-            selectedRarity: ''
+            selectedRarity: '',
+            selectedType: ''
         }
     },
     methods: {
@@ -339,6 +221,12 @@ export default {
     computed: {
         uniqueRarities() {
             return [...new Set(this.originalCards.map(card => card.rarity))]
+        },
+        uniqueTypes() {
+            return [...new Set(this.originalCards.map(card => card.type))]
+        },
+        uniqueArtists() {
+            return [...new Set(this.originalCards.map(card => card.artist))]
         }
     },
     mounted(){
