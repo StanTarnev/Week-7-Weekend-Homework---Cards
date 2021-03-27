@@ -33,125 +33,11 @@
                     </div>
                     <div id="artist-filter">
                         <label for="show-by-artist">Artist: </label>
-                        <select id="show-by-artist">
-                            <option value="" hidden>Choose...</option>
-                            <option v-on:click="filterByArtist('Pete Venters')">Pete Venters</option>
-                            <option v-on:click="filterByArtist('Volkan Baǵa')">Volkan Baǵa</option>
-                            <option v-on:click="filterByArtist('Justin Sweet')">Justin Sweet</option>
-                            <option v-on:click="filterByArtist('Matthew D. Wilson')">Matthew D. Wilson</option>
-                            <option v-on:click="filterByArtist('Rebecca Guay')">Rebecca Guay</option>
-                            <option v-on:click="filterByArtist('Rob Alexander')">Rob Alexander</option>
-                            <option v-on:click="filterByArtist('Zoltan Boros & Gabor Szikszai')">Zoltan Boros & Gabor Szikszai</option>
-                            <option v-on:click="filterByArtist('Steven Belledin')">Steven Belledin</option>
-                            <option v-on:click="filterByArtist('Daren Bader')">Daren Bader</option>
-                            <option v-on:click="filterByArtist('Christopher Rush')">Christopher Rush</option>
-                            <option v-on:click="filterByArtist('Stephen Tappin')">Stephen Tappin</option>
-                            <option v-on:click="filterByArtist('Kev Walker')">Kev Walker</option>
-                            <option v-on:click="filterByArtist('Anthony S. Waters')">Anthony S. Waters</option>
-                            <option v-on:click="filterByArtist('Ittoku')">Ittoku</option>
-                            <option v-on:click="filterByArtist('Luca Zontini')">Luca Zontini</option>
-                            <option v-on:click="filterByArtist('rk post')">rk post</option>
-                            <option v-on:click="filterByArtist('Dan Dos Santos')">Dan Dos Santos</option>
-                            <option v-on:click="filterByArtist('D. Alexander Gregory')">D. Alexander Gregory</option>
-                            <option v-on:click="filterByArtist('Wayne England')">Wayne England</option>
-                            <option v-on:click="filterByArtist('Anson Maddocks')">Anson Maddocks</option>
-                            <option v-on:click="filterByArtist('Stephen Daniele')">Stephen Daniele</option>
-                            <option v-on:click="filterByArtist('Jim Murray')">Jim Murray</option>
-                            <option v-on:click="filterByArtist('Christopher Moeller')">Christopher Moeller</option>
-                            <option v-on:click="filterByArtist('Greg Hildebrandt')">Greg Hildebrandt</option>
-                            <option v-on:click="filterByArtist('Arnie Swekel')">Arnie Swekel</option>
-                            <option v-on:click="filterByArtist('Mark Poole')">Mark Poole</option>
-                            <option v-on:click="filterByArtist('Alan Pollack')">Alan Pollack</option>
-                            <option v-on:click="filterByArtist('Michael Sutfin')">Michael Sutfin</option>
-                            <option v-on:click="filterByArtist('Mark Zug')">Mark Zug</option>
-                            <option v-on:click="filterByArtist('Randy Gallegos')">Randy Gallegos</option>
-                            <option v-on:click="filterByArtist('Jim Pavelec')">Jim Pavelec</option>
-                            <option v-on:click="filterByArtist('Alex Horley-Orlandelli')">Alex Horley-Orlandelli</option>
-                            <option v-on:click="filterByArtist('Franz Vohwinkel')">Franz Vohwinkel</option>
-                            <option v-on:click="filterByArtist('Roger Raupp')">Roger Raupp</option>
-                            <option v-on:click="filterByArtist('Adam Rex')">Adam Rex</option>
-                            <option v-on:click="filterByArtist('Daarken')">Daarken</option>
-                            <option v-on:click="filterByArtist('Ralph Horsley')">Ralph Horsley</option>
-                            <option v-on:click="filterByArtist('Mark Tedin')">Mark Tedin</option>
-                            <option v-on:click="filterByArtist('Scott M. Fischer')">Scott M. Fischer</option>
-                            <option v-on:click="filterByArtist('Mark Brill')">Mark Brill</option>
-                            <option v-on:click="filterByArtist('Greg Staples')">Greg Staples</option>
-                            <option v-on:click="filterByArtist('Brian Despain')">Brian Despain</option>
-                            <option v-on:click="filterByArtist('Carl Critchlow')">Carl Critchlow</option>
-                            <option v-on:click="filterByArtist('Jeremy Jarvis')">Jeremy Jarvis</option>
-                            <option v-on:click="filterByArtist('Darrell Riche')">Darrell Riche</option>
-                            <option v-on:click="filterByArtist('Dave Kendall')">Dave Kendall</option>
-                            <option v-on:click="filterByArtist('Matt Thompson')">Matt Thompson</option>
-                            <option v-on:click="filterByArtist('Thomas M. Baxa')">Thomas M. Baxa</option>
-                            <option v-on:click="filterByArtist('Jim Nelson')">Jim Nelson</option>
-                            <option v-on:click="filterByArtist('Brom')">Brom</option>
-                            <option v-on:click="filterByArtist('Robert Bliss')">Robert Bliss</option>
-                            <option v-on:click="filterByArtist('Jon J Muth')">Jon J Muth</option>
-                            <option v-on:click="filterByArtist("William O'Connor")">William O'Connor</option>
-                            <option v-on:click="filterByArtist('Ron Spears')">Ron Spears</option>
-                            <option v-on:click="filterByArtist('Tom Fleming')">Tom Fleming</option>
-                            <option v-on:click="filterByArtist('Eric Peterson')">Eric Peterson</option>
-                            <option v-on:click="filterByArtist('Nelson DeCastro')">Nelson DeCastro</option>
-                            <option v-on:click="filterByArtist('Dany Orizio')">Dany Orizio</option>
-                            <option v-on:click="filterByArtist('Terese Nielsen')">Terese Nielsen</option>
-                            <option v-on:click="filterByArtist('Aleksi Briclot')">Aleksi Briclot</option>
-                            <option v-on:click="filterByArtist('Scott Kirschner')">Scott Kirschner</option>
-                            <option v-on:click="filterByArtist('Puddnhead')">Puddnhead</option>
-                            <option v-on:click="filterByArtist('Dermot Power')">Dermot Power</option>
-                            <option v-on:click="filterByArtist('Roger Raupp')">Roger Raupp</option>
-                            <option v-on:click="filterByArtist('Francis Tsai')">Francis Tsai</option>
-                            <option v-on:click="filterByArtist('Tristan Elwell')">Tristan Elwell</option>
-                            <option v-on:click="filterByArtist('Mike Dringenberg')">Mike Dringenberg</option>
-                            <option v-on:click="filterByArtist('Jeff Easley')">Jeff Easley</option>
-                            <option v-on:click="filterByArtist('Dave Dorman')">Dave Dorman</option>
-                            <option v-on:click="filterByArtist('Chippy')">Chippy</option>
-                            <option v-on:click="filterByArtist('John Matson')">John Matson</option>
-                            <option v-on:click="filterByArtist('Matt Cavotta')">Matt Cavotta</option>
-                            <option v-on:click="filterByArtist('DiTerlizzi')">DiTerlizzi</option>
-                            <option v-on:click="filterByArtist('Brian Snõddy')">Brian Snõddy</option>
-                            <option v-on:click="filterByArtist('Ben Thompson')">Ben Thompson</option>
-                            <option v-on:click="filterByArtist('Lucio Parrillo')">Lucio Parrillo</option>
-                            <option v-on:click="filterByArtist('Nick Percival')">Nick Percival</option>
-                            <option v-on:click="filterByArtist('Steve Luke')">Steve Luke</option>
-                            <option v-on:click="filterByArtist('Mike Ploog')">Mike Ploog</option>
-                            <option v-on:click="filterByArtist('Jeff Miracola')">Jeff Miracola</option>
-                            <option v-on:click="filterByArtist('Marcelo Vignali')">Marcelo Vignali</option>
-                            <option v-on:click="filterByArtist('Gary Ruddell')">Gary Ruddell</option>
-                            <option v-on:click="filterByArtist('Heather Hudson')">Heather Hudson</option>
-                            <option v-on:click="filterByArtist('Steve Firchow')">Steve Firchow</option>
-                            <option v-on:click="filterByArtist('Paolo Parente')">Paolo Parente</option>
-                            <option v-on:click="filterByArtist('Donato Giancola')">Donato Giancola</option>
-                            <option v-on:click="filterByArtist('Jon Foster')">Jon Foster</option>
-                            <option v-on:click="filterByArtist('Cyril Van Der Haegen')">Cyril Van Der Haegen</option>
-                            <option v-on:click="filterByArtist('Lars Grant-West')">Lars Grant-West</option>
-                            <option v-on:click="filterByArtist('Richard Sardinha')">Richard Sardinha</option>
-                            <option v-on:click="filterByArtist('D. J. Cleland-Hura')">D. J. Cleland-Hura</option>
-                            <option v-on:click="filterByArtist('John Howe')">John Howe</option>
-                            <option v-on:click="filterByArtist('Dan Scott')">Dan Scott</option>
-                            <option v-on:click="filterByArtist('Larry Elmore')">Larry Elmore</option>
-                            <option v-on:click="filterByArtist('John Avon')">John Avon</option>
-                            <option v-on:click="filterByArtist('Jeffrey R. Busch')">Jeffrey R. Busch</option>
-                            <option v-on:click="filterByArtist('Tim Hildebrandt')">Tim Hildebrandt</option>
-                            <option v-on:click="filterByArtist('Todd Lockwood')">Todd Lockwood</option>
-                            <option v-on:click="filterByArtist('Ron Spencer')">Ron Spencer</option>
-                            <option v-on:click="filterByArtist('Doug Chaffee')">Doug Chaffee</option>filterByArtist
-                            <option v-on:click="filterByArtist('John Zeleznik')">John Zeleznik</option>
-                            <option v-on:click="filterByArtist('Dana Knutson')">Dana Knutson</option>
-                            <option v-on:click="filterByArtist('Hannibal King')">Hannibal King</option>
-                            <option v-on:click="filterByArtist('Stephan Martiniere')">Stephan Martiniere</option>
-                            <option v-on:click="filterByArtist('Scott Bailey')">Scott Bailey</option>
-                            <option v-on:click="filterByArtist('Richard Wright')">Richard Wright</option>
-                            <option v-on:click="filterByArtist('Martina Pilcerova')">Martina Pilcerova</option>
-                            <option v-on:click="filterByArtist('Glen Angus')">Glen Angus</option>
-                            <option v-on:click="filterByArtist('Vance Kovacs')">Vance Kovacs</option>
-                            <option v-on:click="filterByArtist('Una Fricker')">Una Fricker</option>
-                            <option v-on:click="filterByArtist('Michael Koelsch')">Michael Koelsch</option>
-                            <option v-on:click="filterByArtist('Wayne Reynolds')">Wayne Reynolds</option>
-                            <option v-on:click="filterByArtist('Steve White')">Steve White</option>
-                            <option v-on:click="filterByArtist('Andrew Goldhawk')">Andrew Goldhawk</option>
-                            <option v-on:click="filterByArtist('Nils Hamm')">Nils Hamm</option>
-                            <option v-on:click="filterByArtist('Michael Komarck')">Michael Komarck</option>
-                            <option v-on:click="filterByArtist('Ray Lago')">Ray Lago</option>
+                        <select id="show-by-artist" v-model="selectedArtist" v-on:change="filterByArtist(selectedArtist)">
+                            <option disabled hidden value="">Choose...</option>
+                            <option v-for="artist in uniqueArtists" :value="artist">
+                                {{artist}}
+                            </option>
                         </select>
                     </div>
                 </div>
@@ -177,7 +63,8 @@ export default {
             filterKey: 'All Cards',
             filterValue: null,
             selectedRarity: '',
-            selectedType: ''
+            selectedType: '',
+            selectedArtist: ''
         }
     },
     methods: {
