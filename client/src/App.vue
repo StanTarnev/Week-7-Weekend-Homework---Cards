@@ -176,7 +176,7 @@ body {
     margin-top: 42px;
 }
 
-#show-by-rarity, #show-by-type, #show-by-artist, button {
+#show-by-rarity, #show-by-type, #show-by-artist, button, option {
     font-family: inherit;
     font-weight: bold;
     border-radius: 3px;
