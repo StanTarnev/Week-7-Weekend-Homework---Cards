@@ -105,10 +105,10 @@ export default {
             return [...new Set(this.originalCards.map(card => card.rarity))]
         },
         uniqueTypes() {
-            return [...new Set(this.originalCards.map(card => card.type))]
+            return [...new Set(this.originalCards.map(card => card.type))].sort();
         },
         uniqueArtists() {
-            return [...new Set(this.originalCards.map(card => card.artist))]
+            return [...new Set(this.originalCards.map(card => card.artist))].sort();
         }
     },
     mounted(){
@@ -176,7 +176,7 @@ body {
     margin-top: 42px;
 }
 
-#show-by-rarity, #show-by-type, #show-by-artist, button, option {
+label, select, button, option {
     font-family: inherit;
     font-weight: bold;
     border-radius: 3px;
