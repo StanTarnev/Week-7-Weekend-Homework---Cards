@@ -83,16 +83,19 @@ export default {
             this.cards = this.originalCards.filter(card => card.rarity == property);
             this.filterKey = 'Rarity:';
             this.filterValue = property;
+            this.selectedRarity = '';
         },
         filterByType(property) {
             this.cards = this.originalCards.filter(card => card.type == property);
             this.filterKey = 'Type:';
             this.filterValue = property;
+            this.selectedType = '';
         },
         filterByArtist(property) {
             this.cards = this.originalCards.filter(card => card.artist == property);
             this.filterKey = 'Artist:';
             this.filterValue = property;
+            this.selectedArtist = '';
         },
         showAll() {
             this.cards = this.originalCards;
