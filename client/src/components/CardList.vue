@@ -23,7 +23,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   background-color: white;
-  padding: 12px 0 12px 12px;
+  padding: 11px 0 6px 11px;
   border: 6px solid red;
   border-radius: 11px;
   align-content: flex-start;
